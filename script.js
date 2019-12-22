@@ -32,11 +32,6 @@ function upper(string) {
 
 var generateHtml = (data)=> {
     //localStorage.setItem("pidKey", data.id);
-    data.name = upper(data.name);
-    /*if(data.abilities.length==1)
-        var abilities = 'Ability: ';
-    else
-        var abilities = 'Abilities: ';*/
     var abilities = ``
     for(var i = 0; i < data.abilities.length; i++) {
         abilities += upper(data.abilities[i].ability.name);
@@ -51,6 +46,10 @@ var generateHtml = (data)=> {
             types += `<br>`
     }
 
+    if(localStorage.getItem("type")){
+        if (types.indexOf(localStorage.getItem("type"))<0)
+            return;
+    }
 /*  Single Page Entry  
     const html = `
         <div class="pokemonBG">
@@ -70,7 +69,7 @@ var generateHtml = (data)=> {
     const html = `
         <td align="center" class="pokemonBG">#${data.id}</td>
         <td align="center" class="pokemonBG"><img src=${data.sprites.front_default} height="75" width="75"></td>
-        <td align="center" class="pokemonBG">${data.name}</td>
+        <td align="center" class="pokemonBG">${upper(data.name)}</td>
         <td align="center" class="pokemonBG">${types}</td>
         <td align="center" class="pokemonBG">${abilities}</td>
         <td align="center" class="pokemonBG">${data.stats[5].base_stat}</td>
@@ -110,6 +109,7 @@ var generateHtml = (data)=> {
 //const clicked = document.getElementById('pokeid')
 //clicked.addEventListener('click', getData);
 
+/* Dropdown menu for single page navigation
 var createDropdown = (data)=> {
     var html = `<select onchange="getDropdownData()" name="SelectPokemon" size="1" id="SelectPokemon">`
     html += `<option>--Select Pokemon--</option>`
@@ -120,6 +120,7 @@ var createDropdown = (data)=> {
     const dropdownDiv = document.querySelector('.dropdown')
     dropdownDiv.innerHTML = html
 }
+*/
 
 var listPokemon = (data)=> {
     for(var i = 0; i < 802; i++) {
@@ -129,7 +130,51 @@ var listPokemon = (data)=> {
     }
 }
 
-/*
+const bug = document.getElementById('bug')
+bug.addEventListener('click', function(){changeTypeFilter('Bug')});
+const dark = document.getElementById('dark')
+dark.addEventListener('click', function(){changeTypeFilter('Dark')});
+const dragon = document.getElementById('dragon')
+dragon.addEventListener('click', function(){changeTypeFilter('Dragon')});
+const electric = document.getElementById('electric')
+electric.addEventListener('click', function(){changeTypeFilter('Electric')});
+const fairy = document.getElementById('fairy')
+fairy.addEventListener('click', function(){changeTypeFilter('Fairy')});
+const fight = document.getElementById('fight')
+fight.addEventListener('click', function(){changeTypeFilter('Fight')});
+const fire = document.getElementById('fire')
+fire.addEventListener('click', function(){changeTypeFilter('Fire')});
+const flying = document.getElementById('flying')
+flying.addEventListener('click', function(){changeTypeFilter('Flying')});
+const ghost = document.getElementById('ghost')
+ghost.addEventListener('click', function(){changeTypeFilter('Ghost')});
+const grass = document.getElementById('grass')
+grass.addEventListener('click', function(){changeTypeFilter('Grass')});
+const ground = document.getElementById('ground')
+ground.addEventListener('click', function(){changeTypeFilter('Ground')});
+const ice = document.getElementById('ice')
+ice.addEventListener('click', function(){changeTypeFilter('Ice')});
+const normal = document.getElementById('normal')
+normal.addEventListener('click', function(){changeTypeFilter('Normal')});
+const poison = document.getElementById('poison')
+poison.addEventListener('click', function(){changeTypeFilter('Poison')});
+const psychic = document.getElementById('psychic')
+psychic.addEventListener('click', function(){changeTypeFilter('Psychic')});
+const rock = document.getElementById('rock')
+rock.addEventListener('click', function(){changeTypeFilter('Rock')});
+const steel = document.getElementById('steel')
+steel.addEventListener('click', function(){changeTypeFilter('Steel')});
+const water = document.getElementById('water')
+water.addEventListener('click', function(){changeTypeFilter('Water')});
+const all = document.getElementById('all')
+all.addEventListener('click', function(){changeTypeFilter('')});
+
+function changeTypeFilter(type) {
+    localStorage.setItem("type", type);
+    window.location.reload(false);
+}
+
+/* Functions for single page navigation
 function getData() {
     if(isNaN(document.getElementById('pid').value))
     localStorage.setItem("pidKey", document.getElementById('pid').value.toLowerCase());
@@ -155,5 +200,4 @@ function getDropdownData() {
     localStorage.setItem("index", x);
     window.location.reload(false); 
 }
-
 */

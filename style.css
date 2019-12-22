@@ -82,3 +82,12 @@ input[type=submit] {
     border: 5px solid black;
     padding: 10px;
 }
+
+.type {
+    text-decoration: none;
+    font-size: smaller;
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    padding: 3px;
+}
