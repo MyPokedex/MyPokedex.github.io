@@ -20,10 +20,10 @@ body {
     color: black;
     font-family: 'Pokemon-GB';
     font-size: smaller;
-    right: 50%;
+    /*right: 50%;
     bottom: 60%;
     transform: translate(50%,50%);
-    position: absolute;
+    position: absolute;*/
 }
 
 .prev {
@@ -80,5 +80,5 @@ input[type=submit] {
 .pokemonBG {
     background-color: white;
     border: 5px solid black;
-    padding: 30px;
+    padding: 10px;
 }
