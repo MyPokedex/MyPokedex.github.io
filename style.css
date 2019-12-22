@@ -3,6 +3,12 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    height: 100%;
+    overflow: hidden;
+}
+
+html {
+    height: 100%;
 }
 
 @font-face {
@@ -14,7 +20,6 @@ body {
     font-family:"Pokemon-GB";
     src: url("Pokemon GB.ttf") format("truetype");
 }
-
 
 .stuff {
     color: black;
@@ -90,4 +95,34 @@ input[type=submit] {
     background-color: white;
     border: 2px solid black;
     padding: 3px;
+}
+
+.topOfPage {
+    text-decoration: none;
+    font-family: 'Pokemon-Solid';
+    font-size: xx-large;
+    color: black;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    border: 5px solid black;
+    padding: 20px;
+}
+
+div.mask {
+    position:           absolute;
+    z-index:            1;
+    top:                0;
+    left:               0;
+    width:              100%;
+    height:             100%;
+    background-color:   white;
+    font-family: 'Pokemon-Solid';
+    font-size: xx-large;
+    color: black;
+}
+
+.loading {
+    transform: translate(0%,300%);
 }

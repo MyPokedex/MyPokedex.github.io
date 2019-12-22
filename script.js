@@ -128,6 +128,12 @@ var listPokemon = (data)=> {
             .then((data)=>data.json())
             .then((pokemon)=>generateHtml(pokemon))
     }
+    //Loading screen
+    setTimeout(function(){
+        document.body.style.overflow = "visible";
+        document.body.style.height = "";
+        document.body.removeChild(document.getElementById('mask'));
+    },2500);    
 }
 
 const bug = document.getElementById('bug')
