@@ -5,10 +5,14 @@ body {
     background-size: cover;
     height: 100%;
     overflow: hidden;
+    padding: 0;
+    margin: 0;
 }
 
 html {
     height: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 @font-face {
@@ -25,6 +29,8 @@ html {
     color: black;
     font-family: 'Pokemon-GB';
     font-size: smaller;
+    left: 0;
+    right: 0;
     /*right: 50%;
     bottom: 60%;
     transform: translate(50%,50%);
@@ -99,15 +105,16 @@ input[type=submit] {
 
 .topOfPage {
     text-decoration: none;
-    font-family: 'Pokemon-Solid';
-    font-size: xx-large;
+    font-family: 'Pokemon-GB';
+    font-size: large;
     color: black;
     position: fixed;
     bottom: 0;
     right: 0;
     background-color: white;
     border: 5px solid black;
-    padding: 20px;
+    padding: 10px;
+    height: 1%;
 }
 
 div.mask {
@@ -125,4 +132,8 @@ div.mask {
 
 .loading {
     transform: translate(0%,300%);
+}
+
+table {
+    width: 1%;
 }
