@@ -8,5 +8,3 @@ Fetches 802 Pokemon data and allows user to navigate using a search bar, dropdow
 Future Plans:
 
 - More information on each Pokemon
-
-- Add filters
