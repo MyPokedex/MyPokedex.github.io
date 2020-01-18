@@ -3,7 +3,7 @@ https://mypokedex.github.io/
 
 Makes use of RESTful api https://pokeapi.co/
 
-Fetches 802 Pokemon data and allows user to navigate using a search bar, dropdown menu, or arrow buttons. (No Sword and Shield pokemon data from api)
+Fetches 802 Pokemon data and allows user to look through a list of Pokemon which could be filtered by typing. (No Sword and Shield pokemon data from api)
 
 Future Plans:
 
