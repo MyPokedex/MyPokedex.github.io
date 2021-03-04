@@ -13,7 +13,7 @@ var {url, type, id} = apiData
 var apiUrl = `${url}${type}/${id}`
 */
 
-fetch('https://pokeapi.co/api/v2/pokemon/?limit=802')
+fetch('https://pokeapi.co/api/v2/pokemon/?limit=898')
     .then((data)=>data.json())
     .then((pokemon)=>listPokemon(pokemon))
     //.then((pokemon)=>createDropdown(pokemon))
