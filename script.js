@@ -123,7 +123,7 @@ var createDropdown = (data)=> {
 */
 
 var listPokemon = async(data)=> {
-    for(var i = 0; i < 899; i++) {
+    for(var i = 0; i < data.length; i++) {
         fetch(data.results[i].url)
             .then((data)=>data.json())
             .then((pokemon)=>generateHtml(pokemon))
